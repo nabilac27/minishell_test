@@ -18,7 +18,7 @@ LIBFT 		= $(LIBFT_DIR)/libft.a
 SRCS		= $(shell find ./src -iname "*.c")
 OBJS		= $(SRCS:./src/%.c=./build/%.o)
 
-CC			= cc
+CC		= cc
 CFLAGS		= -Wall -Wextra -Werror -g
 
 .SILENT:
