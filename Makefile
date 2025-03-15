@@ -6,7 +6,7 @@
 #    By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/15 20:36:40 by nchairun          #+#    #+#              #
-#    Updated: 2025/03/15 20:36:59 by nchairun         ###   ########.fr        #
+#    Updated: 2025/03/15 23:45:18 by nchairun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ LIBFT 		= $(LIBFT_DIR)/libft.a
 SRCS		= $(shell find ./src -iname "*.c")
 OBJS		= $(SRCS:./src/%.c=./build/%.o)
 
-CC		= cc
+CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -g
 
 .SILENT:
@@ -35,7 +35,7 @@ $(NAME): $(OBJS)
 
 clean:
 	rm -f $(OBJS)
-	rm -f $(LIBFT_DIR)/build/libft/*.o
+	[ -d $(LIBFT_DIR)/build/libft ] && rm -f $(LIBFT_DIR)/build/libft/*.o || true
     
 fclean: clean
 	rm -f $(NAME)
